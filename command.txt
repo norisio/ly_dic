@@ -1,0 +1,1 @@
+cat lilypond-command-index.ja.html |sed -e's@</code>@&\n@g' | egrep -oe '<code>.*</code>' | egrep -oe '>[\\[:alpha:]_-]+<' | sed -E 's/[><\\]//g;' | sort | uniq
